@@ -23,5 +23,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var bgpicture: UIImageView!
     
     @IBOutlet weak var Text: UILabel!
+    
+    @IBAction func UnwindFromSkillVC (unwindSegue: UIStoryboardSegue){
+        
+    }
+    
+    
 }
 
