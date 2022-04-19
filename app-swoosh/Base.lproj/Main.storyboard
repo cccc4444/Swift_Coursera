@@ -82,12 +82,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.199999999999999" y="95.802098950524751"/>
+            <point key="canvasLocation" x="-23" y="95"/>
         </scene>
         <!--LeagueVC-->
         <scene sceneID="fbw-f7-Di3">
             <objects>
-                <viewController storyboardIdentifier="strotyB" id="ULs-Jb-6UN" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ULs-Jb-6UN" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sdi-Gh-rzk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desiredLeagueBG" translatesAutoresizingMaskIntoConstraints="NO" id="kGf-FZ-tRs">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.44999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oB-F8-Zoh" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.44999998807907104" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oB-F8-Zoh" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="82" y="646" width="250" height="50"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
@@ -107,7 +107,7 @@
                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="0.9337797619" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="zJ0-Os-Xb6" kind="show" id="8g9-77-vKL"/>
+                                    <action selector="onNextTapped:" destination="ULs-Jb-6UN" eventType="touchUpInside" id="BOc-WU-l4J"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Qd4-vV-ItH">
@@ -143,6 +143,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="MENS">
                                             <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="0.9337797619" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="ULs-Jb-6UN" eventType="touchUpInside" id="xcg-EY-MZn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.44999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbY-tm-nAM" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="80" width="250" height="50"/>
@@ -155,6 +158,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="WOMENS">
                                             <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="0.9337797619" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="ULs-Jb-6UN" eventType="touchUpInside" id="R4O-no-zX0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.44999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90O-61-Kcj" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="160" width="250" height="50"/>
@@ -167,6 +173,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="CO-ED">
                                             <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="0.9337797619" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="ULs-Jb-6UN" eventType="touchUpInside" id="jk5-L0-lvl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -204,11 +213,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9l1-Li-BQu"/>
+                    <connections>
+                        <outlet property="nextBtn" destination="9oB-F8-Zoh" id="4Zl-Lk-ylT"/>
+                        <segue destination="zJ0-Os-Xb6" kind="show" identifier="toSkillVCSehue" id="bsi-hz-hrP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okW-Oc-1oP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="t9D-69-icp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="682.60869565217399" y="95.380434782608702"/>
+            <point key="canvasLocation" x="646" y="95"/>
         </scene>
         <!--SkillVC-->
         <scene sceneID="GwU-hL-i21">
@@ -281,13 +294,31 @@
                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="0.9337797619" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gon-kg-Zm2">
+                                <rect key="frame" x="20" y="10" width="54" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="840-iM-2lb"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="54" id="BA7-aU-DW1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="54" id="anD-Bu-gLF"/>
+                                    <constraint firstAttribute="width" constant="54" id="nAB-qK-SHi"/>
+                                    <constraint firstAttribute="height" constant="38" id="tbO-jV-xNB"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="38" id="vqZ-kl-adX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="backButton" title=""/>
+                                <connections>
+                                    <action selector="onLeagueCV:" destination="zJ0-Os-Xb6" eventType="touchUpInside" id="Yfc-Et-pM0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R5n-Hn-oDG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LBH-ll-MGW" firstAttribute="centerX" secondItem="Hnv-fI-5ah" secondAttribute="centerX" id="5c6-9I-Jn9"/>
+                            <constraint firstItem="Gon-kg-Zm2" firstAttribute="top" secondItem="R5n-Hn-oDG" secondAttribute="top" constant="10" id="AWQ-kp-sr9"/>
                             <constraint firstItem="S4X-g6-Mvs" firstAttribute="centerX" secondItem="Hnv-fI-5ah" secondAttribute="centerX" id="FwD-Ht-XNp"/>
                             <constraint firstItem="LBH-ll-MGW" firstAttribute="centerX" secondItem="Hnv-fI-5ah" secondAttribute="centerX" id="HOL-wF-GQx"/>
+                            <constraint firstItem="Gon-kg-Zm2" firstAttribute="leading" secondItem="R5n-Hn-oDG" secondAttribute="leading" constant="20" id="LNp-Fo-aj5"/>
                             <constraint firstItem="gFk-de-A3w" firstAttribute="top" secondItem="R5n-Hn-oDG" secondAttribute="top" id="PHY-TW-Lcp"/>
                             <constraint firstItem="gFk-de-A3w" firstAttribute="leading" secondItem="R5n-Hn-oDG" secondAttribute="leading" id="PaK-ZB-htS"/>
                             <constraint firstItem="R5n-Hn-oDG" firstAttribute="bottom" secondItem="HdT-H7-Jc6" secondAttribute="bottom" constant="20" id="SE6-aU-KW4"/>
@@ -299,12 +330,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FHx-nZ-HW3"/>
+                    <connections>
+                        <segue destination="ULs-Jb-6UN" kind="show" identifier="onLeagueSegue" id="fWJ-gU-LXy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9r-6D-twd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1319" y="96"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bsi-hz-hrP"/>
+        <segue reference="fWJ-gU-LXy"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>

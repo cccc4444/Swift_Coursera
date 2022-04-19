@@ -9,13 +9,19 @@ import UIKit
 
 class SkillVC: UIViewController {
 
+    var instancePlayer: Player! 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let _ = instancePlayer.desiredLeague {
+            print(instancePlayer.desiredLeague!)
+        }
     }
     
 
+    @IBAction func onLeagueCV(_ sender: Any) {
+        performSegue(withIdentifier: "onLeagueSegue", sender: self)
+    }
     /*
     // MARK: - Navigation
 
