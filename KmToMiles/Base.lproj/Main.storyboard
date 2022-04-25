@@ -1,24 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="KmToMiles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kilometers" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NmB-aH-dDZ" customClass="TextFields" customModule="KmToMiles" customModuleProvider="target">
+                                <rect key="frame" x="45" y="144" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="b2C-h8-Ftq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Be8-u5-I2w">
+                                <rect key="frame" x="45" y="254" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="muf-1U-ahr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="53"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAZ-HL-fgD">
+                                <rect key="frame" x="45" y="781.66666666666663" width="300" height="37.333333333333371"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset Calculator">
+                                    <fontDescription key="titleFontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="0.9337797619" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetCalculations:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lB6-D0-lJU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0r-BH-Cx5">
+                                <rect key="frame" x="155.33333333333334" y="354" width="79.666666666666657" height="44.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Invert">
+                                    <fontDescription key="titleFontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="invertSystems:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJS-zz-ZiJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGB-mM-6BX">
+                                <rect key="frame" x="173.66666666666666" y="309" width="42.666666666666657" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.34640008090722441" green="0.34640008090722441" blue="0.34640008090722441" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="NmB-aH-dDZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4qv-cn-C1i"/>
+                            <constraint firstItem="Be8-u5-I2w" firstAttribute="top" secondItem="NmB-aH-dDZ" secondAttribute="bottom" constant="50" id="56D-XZ-7mu"/>
+                            <constraint firstAttribute="bottom" secondItem="TAZ-HL-fgD" secondAttribute="bottom" constant="25" id="9sz-EQ-otD"/>
+                            <constraint firstItem="TAZ-HL-fgD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="D5F-Iv-Usv"/>
+                            <constraint firstItem="TAZ-HL-fgD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dwu-J0-gdG"/>
+                            <constraint firstItem="Be8-u5-I2w" firstAttribute="trailing" secondItem="NmB-aH-dDZ" secondAttribute="trailing" id="I4h-Iu-zlJ"/>
+                            <constraint firstItem="R0r-BH-Cx5" firstAttribute="top" secondItem="Be8-u5-I2w" secondAttribute="bottom" constant="50" id="I60-Pr-NrK"/>
+                            <constraint firstItem="Be8-u5-I2w" firstAttribute="leading" secondItem="NmB-aH-dDZ" secondAttribute="leading" id="JKg-pM-A31"/>
+                            <constraint firstItem="OGB-mM-6BX" firstAttribute="top" secondItem="Be8-u5-I2w" secondAttribute="bottom" constant="5" id="RSB-5n-G1R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NmB-aH-dDZ" secondAttribute="trailing" constant="45" id="T4W-L9-Dir"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TAZ-HL-fgD" secondAttribute="trailing" constant="45" id="UR5-cU-KhX"/>
+                            <constraint firstItem="R0r-BH-Cx5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z8M-nm-OJt"/>
+                            <constraint firstItem="OGB-mM-6BX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bB5-UQ-CSz"/>
+                            <constraint firstItem="Be8-u5-I2w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bmi-Cy-UVu"/>
+                            <constraint firstItem="NmB-aH-dDZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="q4u-A7-qtx"/>
+                            <constraint firstItem="NmB-aH-dDZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="rqd-Pc-fNK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="additionalLabel" destination="OGB-mM-6BX" id="k52-9U-bJz"/>
+                        <outlet property="invertButton" destination="R0r-BH-Cx5" id="xTN-w7-ajl"/>
+                        <outlet property="kmText" destination="NmB-aH-dDZ" id="eQC-kn-WOh"/>
+                        <outlet property="resetButton" destination="TAZ-HL-fgD" id="tCM-WV-A6b"/>
+                        <outlet property="resultLabel" destination="Be8-u5-I2w" id="n0j-yn-3ZV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33.846153846153847" y="79.620853080568722"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="NmB-aH-dDZ">
+            <size key="intrinsicContentSize" width="113.66666666666667" height="34.333333333333336"/>
+        </designable>
+    </designables>
 </document>

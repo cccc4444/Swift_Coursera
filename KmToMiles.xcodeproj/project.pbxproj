@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		1B52152E28164C05008CA657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52152D28164C05008CA657 /* AppDelegate.swift */; };
 		1B52153028164C05008CA657 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52152F28164C05008CA657 /* SceneDelegate.swift */; };
-		1B52153228164C05008CA657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52153128164C05008CA657 /* ViewController.swift */; };
+		1B52153228164C05008CA657 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52153128164C05008CA657 /* MainVC.swift */; };
 		1B52153528164C05008CA657 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B52153328164C05008CA657 /* Main.storyboard */; };
 		1B52153728164C06008CA657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B52153628164C06008CA657 /* Assets.xcassets */; };
 		1B52153A28164C06008CA657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B52153828164C06008CA657 /* LaunchScreen.storyboard */; };
 		1B52154528164C06008CA657 /* KmToMilesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52154428164C06008CA657 /* KmToMilesTests.swift */; };
 		1B52154F28164C06008CA657 /* KmToMilesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52154E28164C06008CA657 /* KmToMilesUITests.swift */; };
 		1B52155128164C06008CA657 /* KmToMilesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52155028164C06008CA657 /* KmToMilesUITestsLaunchTests.swift */; };
+		1B52156128164DE7008CA657 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52156028164DE7008CA657 /* TextFields.swift */; };
+		1B52156328165D16008CA657 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52156228165D16008CA657 /* Calculation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 		1B52152A28164C05008CA657 /* KmToMiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KmToMiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B52152D28164C05008CA657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B52152F28164C05008CA657 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B52153128164C05008CA657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B52153128164C05008CA657 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		1B52153428164C05008CA657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B52153628164C06008CA657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B52153928164C06008CA657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		1B52154A28164C06008CA657 /* KmToMilesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KmToMilesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B52154E28164C06008CA657 /* KmToMilesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KmToMilesUITests.swift; sourceTree = "<group>"; };
 		1B52155028164C06008CA657 /* KmToMilesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KmToMilesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1B52156028164DE7008CA657 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
+		1B52156228165D16008CA657 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		1B52152C28164C05008CA657 /* KmToMiles */ = {
 			isa = PBXGroup;
 			children = (
+				1B52155F28164C5D008CA657 /* Views */,
+				1B52155E28164C1D008CA657 /* Controllers */,
+				1B52155D28164C0E008CA657 /* Model */,
 				1B52152D28164C05008CA657 /* AppDelegate.swift */,
 				1B52152F28164C05008CA657 /* SceneDelegate.swift */,
-				1B52153128164C05008CA657 /* ViewController.swift */,
 				1B52153328164C05008CA657 /* Main.storyboard */,
 				1B52153628164C06008CA657 /* Assets.xcassets */,
 				1B52153828164C06008CA657 /* LaunchScreen.storyboard */,
@@ -125,6 +131,30 @@
 				1B52155028164C06008CA657 /* KmToMilesUITestsLaunchTests.swift */,
 			);
 			path = KmToMilesUITests;
+			sourceTree = "<group>";
+		};
+		1B52155D28164C0E008CA657 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B52156228165D16008CA657 /* Calculation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B52155E28164C1D008CA657 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B52153128164C05008CA657 /* MainVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1B52155F28164C5D008CA657 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B52156028164DE7008CA657 /* TextFields.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B52153228164C05008CA657 /* ViewController.swift in Sources */,
+				1B52153228164C05008CA657 /* MainVC.swift in Sources */,
 				1B52152E28164C05008CA657 /* AppDelegate.swift in Sources */,
 				1B52153028164C05008CA657 /* SceneDelegate.swift in Sources */,
+				1B52156128164DE7008CA657 /* TextFields.swift in Sources */,
+				1B52156328165D16008CA657 /* Calculation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
