@@ -48,7 +48,7 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-
+//for transition
 extension GoalsVC: UIViewControllerTransitioningDelegate{
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
