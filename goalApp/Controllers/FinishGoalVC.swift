@@ -29,7 +29,12 @@ class FinishGoalVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     }
     
     @IBAction func CreateGoalPressed(_ sender: Any) {
-        if PointsTextField.text != ""{
+        let decimalCharacters = CharacterSet.decimalDigits
+
+        let decimalRange = PointsTextField.text!.rangeOfCharacter(from: decimalCharacters)
+
+
+        if PointsTextField.text != "" && decimalRange != nil{
             self.save(completion: {(complete) in
                 if complete {
 //                    self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
@@ -58,7 +63,7 @@ class FinishGoalVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
         let goal = Goal(context: managedContext)
         goal.goalDescription = goalDescription
         goal.goalType = goalType.rawValue
-        goal.goalCompletionValue = Int32(PointsTextField.text!)!
+        goal.goalCompletionValue = Int32(PointsTextField.text!) ?? 0
         goal.goalProgress = Int32(0)
         
         do{

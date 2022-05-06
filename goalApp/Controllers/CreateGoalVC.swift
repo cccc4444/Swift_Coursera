@@ -36,12 +36,12 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
         shortTermBtn.selectedColor()
         longTermBtn.deselectedColor()
     }
-    @IBAction func OnNextPressed(_ sender: Any) {
+    @IBAction func OnNextPressed(_ sender: Any)  {
         if goalTxtView.text != "What is your goal?" && goalTxtView.text != "" && goalTxtView.text != " " {
             guard let finishVC = storyboard?.instantiateViewController(withIdentifier: "FinishGoalVC") as? FinishGoalVC else {
                 return
             }
-            // passing the data
+            goalTxtView.text = goalTxtView.text.trimmingCharacters(in: .whitespacesAndNewlines)
             finishVC.initData(description: goalTxtView.text, type: goalType)
             
     //      presentDetail(createGoalsVC)
@@ -54,7 +54,13 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
             
         }
         else {
-            print("Suka")
+            let alert = UIAlertController(title: "Error", message: "Enter valid data!", preferredStyle: UIAlertController.Style.alert)
+
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
         }
     }
     
