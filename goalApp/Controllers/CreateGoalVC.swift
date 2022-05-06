@@ -41,12 +41,16 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
             guard let finishVC = storyboard?.instantiateViewController(withIdentifier: "FinishGoalVC") as? FinishGoalVC else {
                 return
             }
+            // passing the data
             finishVC.initData(description: goalTxtView.text, type: goalType)
             
     //      presentDetail(createGoalsVC)
+            
             finishVC.modalPresentationStyle = .custom
             finishVC.transitioningDelegate = self
             self.present(finishVC, animated: true, completion: nil)
+            
+//            presentingViewController?.presentSecondary(finishVC)
             
         }
         else {
