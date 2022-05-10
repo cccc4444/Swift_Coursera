@@ -27,7 +27,9 @@ class GoalsVC: UIViewController {
         tableView.dataSource = self
         tableView.isHidden = false
         undoView.isHidden = true
+        
     }
+
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +38,8 @@ class GoalsVC: UIViewController {
         tableView.reloadData()
 
     }
+    
+    
     
     func fetCoreDataObjects(){
         self.fetch(completion: {(complete) in
@@ -60,6 +64,8 @@ class GoalsVC: UIViewController {
         createGoalsVC.transitioningDelegate = self
         self.present(createGoalsVC, animated: true, completion: nil)
         }
+     
+
     
     @IBAction func undoBtnPressed(_ sender: Any) {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
@@ -74,6 +80,8 @@ class GoalsVC: UIViewController {
                 self.undoView.isHidden = true
             }
     }
+    
+    
 }
 
 extension GoalsVC: UITableViewDelegate, UITableViewDataSource{
@@ -98,7 +106,7 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    // so that we can edit tableView and others are added in the end to detlete a cell
+// so that we can edit tableView and others are added in the end to detlete a cell
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -141,6 +149,25 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource{
         let config = UISwipeActionsConfiguration(actions: [addAction])
         return config
     }
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil,
+                                              previewProvider: nil,
+                                              actionProvider: {
+                    suggestedActions in
+            let inspectAction =
+                        UIAction(title: NSLocalizedString("Edit goal 🖊", comment: "")) { action in
+                            guard let createGoalsVC = self.storyboard?.instantiateViewController(withIdentifier: "CreateGoalVC") else {
+                                return
+                            }
+                            createGoalsVC.modalPresentationStyle = .custom
+                            createGoalsVC.transitioningDelegate = self
+                            self.present(createGoalsVC, animated: true, completion: nil)
+                        }
+            return UIMenu(title: "", children: [inspectAction])
+        })
+    }
+    
+    
 }
 
 

@@ -29,4 +29,5 @@ class GoalCell: UITableViewCell {
             completionView.isHidden = true
         }
     }
+    
 }

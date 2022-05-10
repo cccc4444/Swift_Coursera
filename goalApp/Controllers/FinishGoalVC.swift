@@ -75,7 +75,7 @@ class FinishGoalVC: UIViewController, UITextViewDelegate, UITextFieldDelegate {
             debugPrint("Could not save \(error.localizedDescription)")
             completion(false)
         }
-    }
+        }
 
     
 }
