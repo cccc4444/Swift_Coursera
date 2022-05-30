@@ -1,2 +1,3 @@
 # Swift_Learning
-Some examples from Coursera course of using UIKit in Swift apps
+Some examples of projects on Swift I've made.
+Projects are on different branches.
