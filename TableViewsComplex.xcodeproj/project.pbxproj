@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B5D839B2847602400D65580 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5D839A2847602400D65580 /* CountryTableViewCell.swift */; };
+		1B5D839D2848A32700D65580 /* AddEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5D839C2848A32700D65580 /* AddEditTableViewController.swift */; };
 		1B71A0332847502B0066BD5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A0322847502B0066BD5A /* AppDelegate.swift */; };
 		1B71A0352847502B0066BD5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A0342847502B0066BD5A /* SceneDelegate.swift */; };
-		1B71A0372847502B0066BD5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A0362847502B0066BD5A /* ViewController.swift */; };
 		1B71A03A2847502B0066BD5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B71A0382847502B0066BD5A /* Main.storyboard */; };
 		1B71A03C2847502B0066BD5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B71A03B2847502B0066BD5A /* Assets.xcassets */; };
 		1B71A03F2847502B0066BD5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B71A03D2847502B0066BD5A /* LaunchScreen.storyboard */; };
+		1B71A04A284750CD0066BD5A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A049284750CD0066BD5A /* Country.swift */; };
+		1B71A04C2847513D0066BD5A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A04B2847513D0066BD5A /* TableViewController.swift */; };
+		1B71A04E284753500066BD5A /* CountryBatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A04D284753500066BD5A /* CountryBatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B5D839A2847602400D65580 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		1B5D839C2848A32700D65580 /* AddEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTableViewController.swift; sourceTree = "<group>"; };
 		1B71A02F2847502B0066BD5A /* TableViewsComplex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewsComplex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B71A0322847502B0066BD5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B71A0342847502B0066BD5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B71A0362847502B0066BD5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B71A0392847502B0066BD5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B71A03B2847502B0066BD5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B71A03E2847502B0066BD5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B71A0402847502B0066BD5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B71A049284750CD0066BD5A /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		1B71A04B2847513D0066BD5A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		1B71A04D284753500066BD5A /* CountryBatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryBatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		1B71A0312847502B0066BD5A /* TableViewsComplex */ = {
 			isa = PBXGroup;
 			children = (
+				1B71A048284750A80066BD5A /* Views */,
+				1B71A0472847509A0066BD5A /* Controller */,
+				1B71A046284750910066BD5A /* Model */,
 				1B71A0322847502B0066BD5A /* AppDelegate.swift */,
 				1B71A0342847502B0066BD5A /* SceneDelegate.swift */,
-				1B71A0362847502B0066BD5A /* ViewController.swift */,
 				1B71A0382847502B0066BD5A /* Main.storyboard */,
 				1B71A03B2847502B0066BD5A /* Assets.xcassets */,
 				1B71A03D2847502B0066BD5A /* LaunchScreen.storyboard */,
 				1B71A0402847502B0066BD5A /* Info.plist */,
 			);
 			path = TableViewsComplex;
+			sourceTree = "<group>";
+		};
+		1B71A046284750910066BD5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B71A049284750CD0066BD5A /* Country.swift */,
+				1B71A04D284753500066BD5A /* CountryBatch.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B71A0472847509A0066BD5A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B71A04B2847513D0066BD5A /* TableViewController.swift */,
+				1B5D839C2848A32700D65580 /* AddEditTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B71A048284750A80066BD5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B5D839A2847602400D65580 /* CountryTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B71A0372847502B0066BD5A /* ViewController.swift in Sources */,
+				1B5D839B2847602400D65580 /* CountryTableViewCell.swift in Sources */,
 				1B71A0332847502B0066BD5A /* AppDelegate.swift in Sources */,
+				1B71A04A284750CD0066BD5A /* Country.swift in Sources */,
+				1B71A04E284753500066BD5A /* CountryBatch.swift in Sources */,
 				1B71A0352847502B0066BD5A /* SceneDelegate.swift in Sources */,
+				1B5D839D2848A32700D65580 /* AddEditTableViewController.swift in Sources */,
+				1B71A04C2847513D0066BD5A /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
